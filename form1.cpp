@@ -72,9 +72,9 @@ Form1::Form1(wxWindow* parent, wxWindowID id, const wxString& caption, const wxP
 	wxConfigBase* conf = wxConfigBase::Get(false); // Получить объект конфигурации приложения
 	if (conf) { // Если объект конфигурации приложения создан
 		wxString user_lang = (conf->Read(wxT("language"), wxT("en"))); // Прочитать значение языка из конфигурации
-		wxChoice* ch = (wxChoice*)FindWindowById(Choice_Lang); // Найти компонент с выбором языка
-		if (ch) { // Если элемент найден
-			ch->SetStringSelection(user_lang); // Установить язык в компоненте
+		//wxChoice* cl = (wxChoice*)FindWindowById(Choice_Lang); // Найти компонент с выбором языка
+		if (cl) { // Если элемент найден
+			cl->SetStringSelection(user_lang); // Установить язык в компоненте
 		}
 	}
 	this->SetTitle(_("Multilingual program")); // Установить имя приложения на выбранном языке
@@ -122,6 +122,7 @@ Form1::~Form1()
 void Form1::Init()
 {
 	////@begin Form1 member initialisation
+    cl = NULL;
 	////@end Form1 member initialisation
 }
 
@@ -142,20 +143,20 @@ void Form1::CreateControls()
     itemBoxSizer1->Add(itemButton2, 0, wxALIGN_CENTER_HORIZONTAL|wxALL, 5);
 
     wxBoxSizer* itemBoxSizer3 = new wxBoxSizer(wxHORIZONTAL);
-    itemBoxSizer1->Add(itemBoxSizer3, 0, 0, 0);
+    itemBoxSizer1->Add(itemBoxSizer3, 0, wxALIGN_CENTER_HORIZONTAL|wxALL, 5);
 
     wxStaticText* itemStaticText4 = new wxStaticText( itemFrame1, StaticText1, _("Hello everyone, I'm a C++ program with wxWidgets!"), wxDefaultPosition, wxDefaultSize, 0 );
     itemBoxSizer3->Add(itemStaticText4, 0, wxALIGN_CENTER_VERTICAL|wxALL, 5);
 
     itemBoxSizer3->Add(5, 5, 0, wxALIGN_CENTER_VERTICAL|wxALL, 5);
 
-    wxArrayString itemChoice6Strings;
-    itemChoice6Strings.Add(_("ru"));
-    itemChoice6Strings.Add(_("en"));
-    itemChoice6Strings.Add(_("de"));
-    wxChoice* itemChoice6 = new wxChoice( itemFrame1, Choice_Lang, wxDefaultPosition, wxDefaultSize, itemChoice6Strings, 0 );
-    itemChoice6->SetStringSelection(_("en"));
-    itemBoxSizer3->Add(itemChoice6, 0, wxALIGN_CENTER_VERTICAL|wxALL, 5);
+    wxArrayString clStrings;
+    clStrings.Add(_("ru"));
+    clStrings.Add(_("en"));
+    clStrings.Add(_("de"));
+    cl = new wxChoice( itemFrame1, Choice_Lang, wxDefaultPosition, wxDefaultSize, clStrings, 0 );
+    cl->SetStringSelection(_("en"));
+    itemBoxSizer3->Add(cl, 0, wxALIGN_CENTER_VERTICAL|wxALL, 5);
 
 	////@end Form1 content construction
 }
@@ -222,9 +223,9 @@ void Form1::OnCloseWindow(wxCloseEvent& event)
 	wxConfigBase* conf = wxConfigBase::Get(false); // Получить объект конфигурации приложения
 	if (!conf) return; // Если объект конфигурации приложения не создан, то выход
 
-	wxChoice* ch = (wxChoice*)FindWindowById(Choice_Lang); // Найти компонент с выбором языка
-	if (ch) { // Если компонент найден
-		conf->Write(wxT("language"), ch->GetStringSelection()); // Записать значение из компонента в конфигурацию
+	//wxChoice* cl = (wxChoice*)FindWindowById(Choice_Lang); // Найти компонент с выбором языка
+	if (cl) { // Если компонент найден
+		conf->Write(wxT("language"), cl->GetStringSelection()); // Записать значение из компонента в конфигурацию
 	}
 	// ---------------------------
 

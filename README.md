@@ -100,9 +100,9 @@ Form1::Form1(wxWindow* parent, wxWindowID id, const wxString& caption, const wxP
 	wxConfigBase* conf = wxConfigBase::Get(false); // Получить объект конфигурации приложения
 	if (conf) { // Если объект конфигурации приложения создан
 		wxString user_lang = (conf->Read(wxT("language"), wxT("en"))); // Прочитать значение языка из конфигурации
-		wxChoice* ch = (wxChoice*)FindWindowById(Choice_Lang); // Найти компонент с выбором языка
-		if (ch) { // Если элемент найден
-			ch->SetStringSelection(user_lang); // Установить язык в компоненте
+		wxChoice* cl = (wxChoice*)FindWindowById(Choice_Lang); // Найти компонент с выбором языка
+		if (cl) { // Если элемент найден
+			cl->SetStringSelection(user_lang); // Установить язык в компоненте
 		}
 	}
 	this->SetTitle(_("Multilingual program")); // Установить имя приложения на выбранном языке
@@ -122,9 +122,9 @@ void Form1::OnCloseWindow(wxCloseEvent& event) {
 	// --- Сохранить настройки из визуальных компонент в конфигурацию ---
 	wxConfigBase* conf = wxConfigBase::Get(false); // Получить объект конфигурации приложения
 	if (!conf) return; // Если объект конфигурации приложения не создан, то выход
-	wxChoice* ch = (wxChoice*)FindWindowById(Choice_Lang); // Найти компонент с выбором языка
-	if (ch) { // Если компонент найден
-		conf->Write(wxT("language"), ch->GetStringSelection()); // Записать значение из компонента в конфигурацию
+	wxChoice* cl = (wxChoice*)FindWindowById(Choice_Lang); // Найти компонент с выбором языка
+	if (cl) { // Если компонент найден
+		conf->Write(wxT("language"), cl->GetStringSelection()); // Записать значение из компонента в конфигурацию
 	}
 	Destroy(); // Закрыть окно
 }

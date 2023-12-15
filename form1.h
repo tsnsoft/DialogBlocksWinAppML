@@ -96,6 +96,7 @@ public:
     static bool ShowToolTips();
 
 ////@begin Form1 member variables
+    wxChoice* cl;
 ////@end Form1 member variables
 };
 
