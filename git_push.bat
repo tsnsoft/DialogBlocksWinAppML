@@ -1,5 +1,5 @@
 @echo off
-chch 1251
+chcp 1251
 
 cd /d "%~dp0"
 
