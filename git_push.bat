@@ -1,19 +1,19 @@
-п»ї@echo off
-@СЃhСЃСЂ 65001
+@echo off
+@сhср 65001
 
 cd /d "%~dp0"
 
-echo Р”РѕР±Р°РІР»РµРЅРёРµ РІСЃРµС… РёР·РјРµРЅРµРЅРёР№...
+echo Добавление всех изменений...
 git add .
 
 for /f "tokens=2 delims==." %%I in ('wmic os get localdatetime /value') do set datetime=%%I
 set commit_msg=update_%datetime%
 
-echo РЎРѕР·РґР°РЅРёРµ РєРѕРјРјРёС‚Р°...
+echo Создание коммита...
 git commit -m "%commit_msg%"
 
-echo РћС‚РїСЂР°РІРєР° РЅР° GitHub...
+echo Отправка на GitHub...
 git push origin main
 
-echo Р“РѕС‚РѕРІРѕ!
+echo Готово!
 pause
