@@ -1,4 +1,4 @@
-@echo off
+﻿@echo off
 @сhср 65001
 
 cd /d "%~dp0"
