@@ -14,4 +14,3 @@ echo Pushing to GitHub...
 git push origin master
 
 echo Done!
-pause
