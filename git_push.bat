@@ -1,19 +1,17 @@
 @echo off
-chcp 1251
-
 cd /d "%~dp0"
 
-echo Добавление всех изменений...
+echo Adding all changes...
 git add .
 
 for /f "tokens=2 delims==." %%I in ('wmic os get localdatetime /value') do set datetime=%%I
 set commit_msg=update_%datetime%
 
-echo Создание коммита...
+echo Creating commit...
 git commit -m "%commit_msg%"
 
-echo Отправка на GitHub...
+echo Pushing to GitHub...
 git push origin main
 
-echo Готово!
+echo Done!
 pause
