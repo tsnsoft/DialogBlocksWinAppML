@@ -145,8 +145,6 @@ void Form1::OnChoiceLangSelected(wxCommandEvent& event) {
 
 http://www.anthemion.co.uk/dialogblocks/
 
-***Бесплатная лицензия на DialogBlocks:*** https://github.com/proffix4/dialogblocks_free
-
 https://www.wxwidgets.org/
 
 https://visualstudio.microsoft.com/ru/vs/community/
