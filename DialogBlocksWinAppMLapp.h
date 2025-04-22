@@ -46,8 +46,8 @@ class DialogBlocksWinAppMLApp: public wxApp
     DECLARE_EVENT_TABLE()
 
 public:
- 	// --- Создать объект локализации приложения для подсистемы wxWidgets ---
-	wxLocale m_locale; 
+    // --- Создать объект локализации приложения для подсистемы wxWidgets ---
+    wxLocale m_locale; 
 
     /// Constructor
     DialogBlocksWinAppMLApp();
