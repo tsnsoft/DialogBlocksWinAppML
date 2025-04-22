@@ -197,7 +197,7 @@ void Form1::OnCloseWindow(wxCloseEvent& event)
 void Form1::OnButton1Click(wxCommandEvent& event)
 {
 	////@begin wxEVT_COMMAND_BUTTON_CLICKED event handler for button1 in Form1.
-		// Before editing this code, remove the block markers.
+	// Before editing this code, remove the block markers.
 	wxMessageBox(_("Hello"));
 	////@end wxEVT_COMMAND_BUTTON_CLICKED event handler for button1 in Form1. 
 }
@@ -210,7 +210,6 @@ void Form1::OnButton1Click(wxCommandEvent& event)
 void Form1::OnChoiceLangSelected(wxCommandEvent& event)
 {
 	wxMessageBox(_("Restart the program")); // Выдать локализованное сообщение
-
 }
 
 
