@@ -5,7 +5,7 @@ msgstr ""
 "PO-Revision-Date: 2025-04-22 15:24+0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: ru\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -18,15 +18,15 @@ msgstr ""
 
 #: form1.cpp:85
 msgid "Multilingual program"
-msgstr "Многоязычная программа"
+msgstr "多言語プログラム"
 
 #: form1.cpp:147
 msgid "Press me"
-msgstr "Нажмите на меня"
+msgstr "私を押してください"
 
 #: form1.cpp:153
 msgid "Hello everyone, I'm a C++ program with wxWidgets!"
-msgstr "Привет всем, я программа на C++ с wxWidgets!"
+msgstr "みなさん、こんにちは。私はWXWidgetsを使用したC ++プログラムです！"
 
 #: form1.cpp:159
 msgid "ru"
@@ -46,37 +46,46 @@ msgstr "ja"
 
 #: form1.cpp:167
 msgid "The Funny button"
-msgstr "Волшебная кнопка"
+msgstr "面白いボタン"
 
 #: form1.cpp:201
 msgid "Hello"
-msgstr "Привет"
+msgstr "こんにちは"
 
 #: form1.cpp:212
 msgid "Restart the program"
-msgstr "Перезапустите программу"
+msgstr "プログラムを再起動します"
 
 #: form2.cpp:66
 msgid "The second window"
-msgstr "Второе окно"
+msgstr "第二の窓"
 
 #: form2.cpp:122
 msgid "I love wxWidgets"
-msgstr "Я люблю wxWidgets"
+msgstr "私はwxwidgetsが大好きです"
 
 #: form2.cpp:125
 msgid "C++ is cool!"
-msgstr "C++ - это круто!"
+msgstr "C ++はクールです！"
 
 #: form2.cpp:128
 msgid "Click it!"
-msgstr "Нажми меня!"
+msgstr "クリックしてください！"
+
+#~ msgid "Я люблю wxWidgets"
+#~ msgstr "Ich liebe wxWidgets"
+
+#~ msgid "C++ - это круто!"
+#~ msgstr "C++ ist cool!"
+
+#~ msgid "Жми!"
+#~ msgstr "Drück!"
 
 #~ msgid "Russian"
-#~ msgstr "Русский"
+#~ msgstr "Russisch"
 
 #~ msgid "English"
-#~ msgstr "Английский"
+#~ msgstr "Englisch"
 
 #~ msgid "German"
-#~ msgstr "Немецкий"
+#~ msgstr "Deutsch"

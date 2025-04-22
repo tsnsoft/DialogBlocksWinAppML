@@ -1,9 +1,9 @@
-﻿/////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////
 // Name:        DialogBlocksWinAppMLapp.cpp
 // Purpose:     
 // Author:      Talipov S.N.
 // Modified by: 
-// Created:     12/12/2023 17:27:14
+// Created:     22.04.2025 13:00:38
 // RCS-ID:      
 // Copyright:   Talipov S.N.
 // Licence:     
@@ -20,14 +20,14 @@
 #include "wx/wx.h"
 #endif
 
-////@begin includes
-////@end includes
-
-#include "DialogBlocksWinAppMLapp.h"
 #include <wx/fileconf.h>
 #include <wx/stdpaths.h>
 #include <wx/config.h>
 
+////@begin includes
+////@end includes
+
+#include "DialogBlocksWinAppMLapp.h"
 
 ////@begin XPM images
 ////@end XPM images
@@ -61,24 +61,25 @@ IMPLEMENT_APP(DialogBlocksWinAppMLApp)
 	END_EVENT_TABLE()
 
 
-	/*
-	 * Constructor for DialogBlocksWinAppMLApp
-	 */
+	// --- Объявление указателя на объект конфигурации ---
+	wxFileConfig* m_fileconfig;
+// -------
 
-	DialogBlocksWinAppMLApp::DialogBlocksWinAppMLApp()
+
+
+/*
+ * Constructor for DialogBlocksWinAppMLApp
+ */
+
+DialogBlocksWinAppMLApp::DialogBlocksWinAppMLApp()
 {
 	Init();
 }
-
-// --- Объявление указателя на объект конфигурации ---
-wxFileConfig* m_fileconfig;
-// -------
 
 
 /*
  * Member initialisation
  */
-
 
 void DialogBlocksWinAppMLApp::Init()
 {
@@ -107,18 +108,23 @@ void DialogBlocksWinAppMLApp::Init()
 			m_locale.Init(wxLANGUAGE_RUSSIAN); // Установить локализацию приложения на русский язык
 			m_locale.AddCatalog(wxT("ru")); // Добавить каталог с переводами на русский язык	
 		}
+		else if (user_lang == L"de") // Если язык пользователя немецкий
+		{
+			setlocale(LC_ALL, "de_DE.UTF-8"); // Установить локаль по умолчанию для Linux на немецкий язык
+			m_locale.Init(wxLANGUAGE_GERMAN); // Установить локализацию приложения на немецкий язык
+			m_locale.AddCatalog(wxT("de")); // Добавить каталог с переводами на немецкий язык
+		}
+		else if (user_lang == L"ja") // Если язык пользователя японский
+		{
+			setlocale(LC_ALL, "ja_JP.UTF-8"); // Установить локаль по умолчанию для Linux на японский язык
+			m_locale.Init(wxLANGUAGE_JAPANESE); // Установить локализацию приложения на японский язык
+			m_locale.AddCatalog(wxT("ja")); // Добавить каталог с переводами на японский язык
+		}
 		else
-			if (user_lang == L"de") // Если язык пользователя немецкий
-			{
-				setlocale(LC_ALL, "de_DE.UTF-8"); // Установить локаль по умолчанию для Linux на немецкий язык
-				m_locale.Init(wxLANGUAGE_GERMAN); // Установить локализацию приложения на немецкий язык
-				m_locale.AddCatalog(wxT("de")); // Добавить каталог с переводами на немецкий язык
-			}
-			else
-			{
-				setlocale(LC_ALL, "en_US.UTF-8"); // Установить локаль по умолчанию для Linux на английский язык
-				m_locale.Init(wxLANGUAGE_ENGLISH); // Установить локализацию приложения на английский язык
-			}
+		{
+			setlocale(LC_ALL, "en_US.UTF-8"); // Установить локаль по умолчанию для Linux на английский язык
+			m_locale.Init(wxLANGUAGE_ENGLISH); // Установить локализацию приложения на английский язык
+		}
 	}
 	// -------------------------------
 
@@ -131,8 +137,8 @@ void DialogBlocksWinAppMLApp::Init()
 bool DialogBlocksWinAppMLApp::OnInit()
 {
 	////@begin DialogBlocksWinAppMLApp initialisation
-	// Remove the comment markers above and below this block
-	// to make permanent changes to the code.
+		// Remove the comment markers above and below this block
+		// to make permanent changes to the code.
 
 #if wxUSE_XPM
 	wxImage::AddHandler(new wxXPMHandler);

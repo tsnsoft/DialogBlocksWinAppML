@@ -1,51 +1,85 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2023-12-12 20:02+0600\n"
-"PO-Revision-Date: 2023-12-12 20:02+0600\n"
+"POT-Creation-Date: 2025-04-22 15:23+0500\n"
+"PO-Revision-Date: 2025-04-22 15:24+0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.4.1\n"
+"X-Generator: Poedit 3.5\n"
 "X-Poedit-Basepath: ../..\n"
 "X-Poedit-KeywordsList: _\n"
 "X-Poedit-SearchPath-0: DialogBlocksWinAppMLapp.cpp\n"
 "X-Poedit-SearchPath-1: form1.cpp\n"
+"X-Poedit-SearchPath-2: form2.cpp\n"
 
-#: form1.cpp:83
+#: form1.cpp:85
 msgid "Multilingual program"
 msgstr "Mehrsprachiges Programm"
 
-#: form1.cpp:145
-msgid "Hello everyone, I'm a C++ program with wxWidgets!"
-msgstr "Hallo zusammen, ich bin ein C++-Programm mit wxWidgets!"
-
-#: form1.cpp:148
+#: form1.cpp:147
 msgid "Press me"
 msgstr "Drück mich"
 
-#: form1.cpp:152
+#: form1.cpp:153
+msgid "Hello everyone, I'm a C++ program with wxWidgets!"
+msgstr "Hallo zusammen, ich bin ein C++-Programm mit wxWidgets!"
+
+#: form1.cpp:159
 msgid "ru"
 msgstr "ru"
 
-#: form1.cpp:153 form1.cpp:156
+#: form1.cpp:160 form1.cpp:164
 msgid "en"
 msgstr "en"
 
-#: form1.cpp:154
+#: form1.cpp:161
 msgid "de"
 msgstr "de"
 
-#: form1.cpp:210
+#: form1.cpp:162
+msgid "ja"
+msgstr "ja"
+
+#: form1.cpp:167
+msgid "The Funny button"
+msgstr "Der lustige Knopf"
+
+#: form1.cpp:201
 msgid "Hello"
 msgstr "Hallo"
 
-#: form1.cpp:248
+#: form1.cpp:212
 msgid "Restart the program"
 msgstr "Starten Sie das Programm neu"
+
+#: form2.cpp:66
+msgid "The second window"
+msgstr "Das zweite Fenster"
+
+#: form2.cpp:122
+msgid "I love wxWidgets"
+msgstr "Ich liebe wxWidgets"
+
+#: form2.cpp:125
+msgid "C++ is cool!"
+msgstr "C++ ist cool!"
+
+#: form2.cpp:128
+msgid "Click it!"
+msgstr "Klick es an!"
+
+#~ msgid "Я люблю wxWidgets"
+#~ msgstr "Ich liebe wxWidgets"
+
+#~ msgid "C++ - это круто!"
+#~ msgstr "C++ ist cool!"
+
+#~ msgid "Жми!"
+#~ msgstr "Drück!"
 
 #~ msgid "Russian"
 #~ msgstr "Russisch"

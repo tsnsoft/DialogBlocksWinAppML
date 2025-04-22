@@ -1,9 +1,9 @@
-﻿/////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////
 // Name:        form1.h
 // Purpose:     
 // Author:      Talipov S.N.
 // Modified by: 
-// Created:     12/12/2023 10:40:53
+// Created:     22.04.2025 13:36:03
 // RCS-ID:      
 // Copyright:   Talipov S.N.
 // Licence:     
@@ -37,6 +37,7 @@
 #define button1 10003
 #define StaticText1 10002
 #define Choice_Lang 10004
+#define ID_BUTTON 10001
 #define SYMBOL_FORM1_STYLE wxCAPTION|wxSYSTEM_MENU|wxMINIMIZE_BOX|wxCLOSE_BOX
 #define SYMBOL_FORM1_TITLE _("Multilingual program")
 #define SYMBOL_FORM1_IDNAME form1
@@ -80,6 +81,9 @@ public:
 
     /// wxEVT_COMMAND_CHOICE_SELECTED event handler for Choice_Lang
     void OnChoiceLangSelected( wxCommandEvent& event );
+
+    /// wxEVT_COMMAND_BUTTON_CLICKED event handler for ID_BUTTON
+    void OnButtonClick( wxCommandEvent& event );
 
 ////@end Form1 event handler declarations
 
